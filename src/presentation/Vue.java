@@ -45,6 +45,12 @@ public class Vue {
                     if (ag==null)
                         System.out.println("Agence inexistante");
                     else  {
+                        do {
+                            System.out.println("Nom client ? ");
+                            nomCli = sc.nextLine();
+                            if (nomCli.length() == 0)
+                                System.out.println("Nom obligatoire");
+                        }while (nomCli.length() == 0);
                         System.out.println("Nom client ? ");
                         nomCli= sc.nextLine();
                         System.out.println("Prenom du client ?");
@@ -63,10 +69,9 @@ public class Vue {
                     break;
                 case 6:
                     break;
-                default:
-                    System.out.println("A bientôt !!! Merciiii");
             }
 
         }while(choix!=6);
+            System.out.println("A bientôt !!! Merciiii");
     }
 }
